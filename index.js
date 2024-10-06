@@ -8,11 +8,13 @@ function multiply(a,b){
 }
 console.log(multiply(10,10)); //*output is 100
 
-function Capitalise(word) {
-    return word.charAt(0).toUpperCase() + word.slice(1).toLowercase()
-
+function Capitalise(sentence) {
+    return sentence.split(' ').map(function(word) {
+        return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+    }).join(' ');
 }
-console.log(Capitalise(hEllO lOve))
+
+console.log(Capitalise("hEllO lOve"));// Output: Hello Love
 
 function lastLetter(str) {
     return str[str.length - 1];
